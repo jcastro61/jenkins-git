@@ -8,7 +8,7 @@ pipeline {
             }
         }
 
-        stage('Build MOre') {
+        stage('Build More') {
             steps {
                 sh '''
                     echo "Multiline shell steps works too"
