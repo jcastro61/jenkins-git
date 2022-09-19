@@ -16,9 +16,11 @@ pipeline {
                 '''
             }
         }
+        
         stage('Report') {
             steps {
-                sh 'echo "Building done"'
+                sh 'echo "Reporting ..."'
+                archiveArtifacts allowEmptyArchive: true, artifacts: '*.txt', fingerprint: true, followSymlinks: false, onlyIfSuccessful: true
             }
         }
     }
