@@ -16,5 +16,10 @@ pipeline {
                 '''
             }
         }
+        stage('Report') {
+            steps {
+                sh 'echo "Building done"'
+            }
+        }
     }
 }
